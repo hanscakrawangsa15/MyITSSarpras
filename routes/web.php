@@ -138,7 +138,7 @@ Route::get('/ruangan/{id}', [PeminjamanController::class, 'show'])
 // ====== PEMINJAMAN ROUTES (Requires Auth) ======
 Route::middleware(['auth'])->group(function () {
 
-    Route::post('/peminjaman', [PeminjamanController::class, 'store'])
+    Route::post('/peminjaman', [PeminjamanController::class, 'createPeminjaman'])
         ->name('peminjaman.store');
 
     Route::post('/peminjaman/check-availability', [PeminjamanController::class, 'checkAvailability'])

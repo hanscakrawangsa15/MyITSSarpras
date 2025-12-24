@@ -66,7 +66,7 @@ class PeminjamanController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function createPeminjaman(Request $request)
     {
         // Middleware auth sudah ada, ini cuma extra guard
         if (!Auth::check()) {
